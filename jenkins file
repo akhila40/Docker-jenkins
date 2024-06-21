@@ -1,0 +1,25 @@
+pipeline{
+agent any 
+stages {
+stage("clone")
+steps{
+echo " fetch the code"
+	}
+}
+stage("build")
+steps{
+echo " Build code"
+	}
+}
+stage(push to docker hub){
+teps{
+echo " Pushcode"
+	}
+}
+stage(Deploy){
+teps{
+echo "Deploy code"
+	}
+  }
+ }
+}
